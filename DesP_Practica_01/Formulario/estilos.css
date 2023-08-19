@@ -1,0 +1,55 @@
+/* Centrar el formulario en la página */
+form {
+    margin: 0 auto;
+    width: 400px;
+    /* Esquema del formulario */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+form li + li {
+    margin-top: 1em;
+}
+
+label {
+    /* Tamaño y alineación uniforme */
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+    /* Espacio entre la etiqueta y el campo de entrada */
+    margin-right: 1em;
+}
+
+/* Estilos para los campos de entrada y área de texto */
+input, textarea {
+    font: 1em sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+    border-color: #000;
+}
+
+/* Estilos específicos para el área de texto */
+textarea {
+    vertical-align: top;
+    height: 5em;
+}
+
+/* Estilos para los botones */
+.button {
+    padding-left: 120px; /* Alineación con el ancho de la etiqueta */
+}
+
+button {
+    margin-left: .5em;
+}
