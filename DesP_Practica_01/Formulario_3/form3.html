@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos3.css">
+    <title>Compra en la Farmacia</title>
+</head>
+
+<body>
+    <header>
+        <h1>Compra en la Farmacia</h1>
+    </header>
+
+    <main>
+        <form action="/procesar-compra" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+            </div>
+            <div class="form-group">
+                <label for="producto">Producto:</label>
+                <select id="producto" name="producto">
+                    <option value="medicina">Medicina</option>
+                    <option value="vitamina">Vitamina</option>
+                    <option value="crema">Crema</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="metodo-pago">Método de Pago:</label>
+                <input type="radio" id="efectivo" name="metodo-pago" value="efectivo" required>
+                <label for="efectivo">Efectivo</label>
+                <input type="radio" id="tarjeta" name="metodo-pago" value="tarjeta" required>
+                <label for="tarjeta">Tarjeta</label>
+            </div>
+            <button type="submit">Realizar Compra</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Farmacia Saludable. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
