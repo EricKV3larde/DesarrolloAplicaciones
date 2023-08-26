@@ -1,0 +1,41 @@
+/* coloreshls.css */
+
+/* Ejemplo 1: Color HLS - Matiz */
+.hls-matiz {
+    background-color: hsl(120, 100%, 50%);
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Ejemplo 2: Color HLS - Luminosidad */
+.hls-luminosidad {
+    background-color: hsl(240, 50%, 75%);
+    color: #333;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Ejemplo 3: Color HLS - Saturación */
+.hls-saturacion {
+    background-color: hsl(45, 75%, 60%);
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Ejemplo 4: Combinación de propiedades HLS */
+.hls-combinado {
+    background-color: hsl(180, 70%, 60%);
+    color: #222;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Ejemplo 5: Otra combinación de propiedades HLS */
+.hls-combinado2 {
+    background-color: hsl(300, 80%, 40%);
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+}

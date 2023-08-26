@@ -1,0 +1,29 @@
+/* colorespornombre.css */
+
+/* Ejemplo 1: Usar el color "rojo" */
+.rojo {
+    color: red;
+}
+
+/* Ejemplo 2: Usar el color "azul" de fondo */
+.azul-fondo {
+    background-color: blue;
+}
+
+/* Ejemplo 3: Usar el color "verde" y negrita */
+.verde-negrita {
+    color: green;
+    font-weight: bold;
+}
+
+/* Ejemplo 4: Usar el color "amarillo" y subrayado */
+.amarillo-subrayado {
+    color: yellow;
+    text-decoration: underline;
+}
+
+/* Ejemplo 5: Usar el color "rosado" y cursiva */
+.rosado-cursiva {
+    color: pink;
+    font-style: italic;
+}

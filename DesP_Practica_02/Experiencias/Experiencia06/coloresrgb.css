@@ -1,0 +1,17 @@
+/* coloresrgb.css */
+
+/* Ejemplo 1: Usar color RGB con valores enteros */
+.rgb-enteros {
+    background-color: rgb(100, 150, 200);
+}
+
+/* Ejemplo 2: Usar color RGB con valores porcentuales */
+.rgb-porcentajes {
+    background-color: rgb(50%, 75%, 100%);
+}
+
+/* Ejemplo 3: Usar color RGB con combinación */
+.rgb-combinado {
+    background-color: rgb(255, 0, 50);
+    color: rgb(0, 255, 100);
+}
