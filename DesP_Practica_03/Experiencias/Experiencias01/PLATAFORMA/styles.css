@@ -1,0 +1,152 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /* Agrega posición relativa al cuerpo */
+}
+
+/* Fondo difuminado negro para el cuerpo */
+body::before {
+    content: "";
+    background: rgba(0, 0, 0);
+    /* Color negro con 50% de opacidad */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Coloca el fondo detrás del contenido */
+}
+
+/* Banner principal */
+.main_banner {
+    background-image: url('fondo_proyecto_fitness.jpg');
+    background-size: 100% 100%;
+    text-align: center;
+    padding: 100px 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Agrega posición relativa para que los elementos hijos estén sobre el fondo */
+}
+
+.main_banner h1 {
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 8rem;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.main_banner h1:hover {
+    color: rgb(238, 70, 40);
+    transform: scale(1.1);
+}
+
+.main_banner p {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Estilos para el botón */
+.btn_register {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5733;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn_register:hover {
+    background-color: #e64228;
+}
+
+/* Estilos para los cuadros de información */
+.info_container {
+    display: flex;
+    /* Utiliza Flexbox para organizar los cuadros de manera horizontal */
+    flex-wrap: wrap;
+    /* Permite que los cuadros se envuelvan a una nueva línea en pantallas pequeñas */
+    justify-content: center;
+    /* Centra los cuadros horizontalmente en el contenedor */
+    color: white;
+}
+
+.boxes {
+    border: 2px solid #ffffff;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    width: calc(33.33% - 40px);
+    /* Distribuye los cuadros en tres columnas y aplica márgenes */
+    min-width: 200px;
+    /* Evita que los cuadros sean demasiado estrechos en pantallas pequeñas */
+    box-sizing: border-box;
+    /* Incluye el padding y el borde en el ancho del cuadro */
+}
+
+.boxes h2 {
+    font-size: 20px; /* Reducir el tamaño de fuente */
+    margin-bottom: 10px;
+    overflow: hidden; /* Evita que el texto se desborde */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos para texto que se desborde */
+    white-space: nowrap; /* Evita el salto de línea del texto largo */
+}
+
+.boxes h2:hover {
+    color: rgb(238, 70, 40);
+    transform: scale(1.1);
+}
+
+.boxes p {
+    font-size: 16px;
+    /* Ajusta el tamaño de fuente para adaptarse a la pantalla */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .main_banner {
+        padding: 50px 0;
+    }
+
+    .main_banner h1 {
+        font-size: 2.5rem;
+        transform: scale(1);
+        /* Restaura el escalado al tamaño original en pantallas más pequeñas */
+    }
+
+    .main_banner p {
+        font-size: 1.2rem;
+    }
+
+    .boxes {
+        width: calc(100% - 40px);
+    }
+    .boxes h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .boxes h2:hover {
+        color: rgb(238, 70, 40);
+        transform: scale(1.1);
+    }
+
+    .boxes p {
+        font-size: 16px;
+    }
+}
