@@ -1,0 +1,49 @@
+<!-- Elminamos carpeta node ya que tiene muchos archivos -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de cuadrícula en Bootstrap</title>
+  <!-- Enlazar los archivos CSS de Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      background-color: #ffffff;
+      margin-top: 50px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px #cccccc;
+    }
+    .row > div {
+      background-color: #007bff;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <p>Columna 1</p>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <p>Columna 2</p>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <p>Columna 3</p>
+      </div>
+    </div>
+  </div>
+  <!-- Enlazar los archivos JavaScript de Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRiDSAUofdLm3oMz5D51O5F0…"></script>
+</body>
+</html>
