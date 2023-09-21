@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #f2f2f2, #ccc);
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+.contenedor {
+  text-align: center; /* Centra el contenido dentro del contenedor */
+  background-color: white; /* Fondo blanco para el contenido */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, #3498db, #2980b9);
+  color: white;
+  padding: 10px;
+}
+
+h2 {
+  font-size: 21.6px;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.boton-venta {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #3498db;
+  border: none;
+  cursor: pointer;
+}
+.boton-venta:hover {
+  background-color: #217dbb;
+}
+
+.boton-compra {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #e74c3c;
+  border: none;
+  cursor: pointer;
+}
+.boton-compra:hover {
+  background-color: #d62c1a;
+}/*# sourceMappingURL=scss.css.map */
