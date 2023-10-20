@@ -1,0 +1,5 @@
+Python es un lenguaje de programación poderoso y versátil. Se utiliza en una amplia variedad de aplicaciones, desde desarrollo web hasta inteligencia artificial. Python es conocido por su sintaxis clara y legible, lo que facilita que los programadores escriban y mantengan código.
+
+Si bien Python es poderoso, también es fácil de aprender para los principiantes. Es un lenguaje ideal para aquellos que están comenzando en la programación, pero también es utilizado por profesionales en la industria.
+
+¡Disfruta explorando el mundo de Python!
