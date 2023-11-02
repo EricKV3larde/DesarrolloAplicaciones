@@ -1,0 +1,99 @@
+<!-- templates/registration_form.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscripción</title>
+    <!-- Agrega la referencia a Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container">
+
+<h2 class="mt-4">Formulario de inscripción de usuarios</h2>
+
+<form id="registroForm" method="POST" onsubmit="return confirmRegistro()">
+    {% csrf_token %}
+    <div class="form-row">
+        <div class="col">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" class="form-control" name="nombre" required>
+  
+            <label for="email">Correo electrónico:</label>
+            <input type="text" class="form-control" name="email" required>
+  
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" class="form-control" name="contraseña" required>
+  
+            <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+            <input type="date" class="form-control" name="fecha_nacimiento" required>
+  
+            <label for="sexo">Sexo:</label>
+            <select class="form-control" name="roles" required>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select>
+
+            <label for="interes">Selecciona temas de interés:</label>
+            <select class="form-control" name="interes" required>
+                <option value="fiction">Ficción</option>
+                <option value="action">Acción</option>
+                <option value="comedy">Comedia</option>
+                <option value="drama">Drama</option>
+            </select>
+
+            <label for="aficiones">Selecciona aficiones:</label>
+            <select class="form-control" name="aficiones" required>
+                <option value="natacion">Natación</option>
+                <option value="basket">Basket</option>
+                <option value="lectura">Lectura</option>
+                <option value="fulbol">Fútbol</option>
+            </select>
+
+            <label for="ciudad">Seleccionar una ciudad:</label>
+            <select class="form-control" name="ciudad" required>
+                <option value="aqp">Arequipa</option>
+                <option value="lim">Lima</option>
+            </select>
+        </div>
+    </div>
+  
+    <div class="form-row mt-2">
+        <div class="col">
+            <input type="submit" class="btn btn-primary" value="Enviar">
+        </div>
+    </div>
+</form>
+
+<!-- Agrega la referencia a Bootstrap JS y jQuery (si aún no lo has hecho en tu proyecto) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    function confirmRegistro() {
+        var nombre = document.getElementsByName('nombre')[0].value;
+        var email = document.getElementsByName('email')[0].value;
+        var contraseña = document.getElementsByName('contraseña')[0].value;
+        var fecha_nacimiento = document.getElementsByName('fecha_nacimiento')[0].value;
+        var sexo = document.getElementsByName('roles')[0].value;
+        var interes = document.getElementsByName('interes')[0].value;
+        var aficiones = document.getElementsByName('aficiones')[0].value;
+        var ciudad = document.getElementsByName('ciudad')[0].value;
+
+        var mensaje = "Confirmar Registro:\n\n";
+        mensaje += "Nombre: " + nombre + "\n";
+        mensaje += "Correo electrónico: " + email + "\n";
+        mensaje += "Contraseña: " + contraseña + "\n";
+        mensaje += "Fecha de nacimiento: " + fecha_nacimiento + "\n";
+        mensaje += "Sexo: " + sexo + "\n";
+        mensaje += "Interés: " + interes + "\n";
+        mensaje += "Aficiones: " + aficiones + "\n";
+        mensaje += "Ciudad: " + ciudad;
+
+        return confirm(mensaje);
+    }
+</script>
+
+</body>
+</html>
