@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de modificadores y utilitarios en Bootstrap</title>
+  <!-- Enlazar los archivos CSS de Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card {
+      margin-bottom: 20px;
+    }
+    .card-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .card-text {
+      margin-bottom: 10px;
+    }
+    .badge-primary {
+      background-color: #007bff;
+    }
+    .badge-secondary {
+      background-color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Título de la tarjeta</h5>
+            <p class="card-text">Algunos ejemplos de texto para construir el título de la tarjeta y formar la mayor parte del contenido de la tarjeta.</p>
+            <a href="#" class="btn btn-primary">Ir a algún lugar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Título de la tarjeta</h5>
+            <p class="card-text">Algunos ejemplos de texto para construir el título de la tarjeta y formar la mayor parte del contenido de la tarjeta.</p>
+            <a href="#" class="btn btn-primary">Ir a algún lugar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Título de la tarjeta</h5>
+            <p class="card-text">Algunos ejemplos de texto para construir el título de la tarjeta y formar la mayor parte del contenido de la tarjeta.</p>
+            <a href="#" class="btn btn-primary">Ir a algún lugar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <h3>Utilitarios</h3>
+    <p>Los utilitarios son clases que se utilizan para modificar propiedades específicas de los elementos, como el color, el tamaño o el espaciado. Aquí hay algunos ejemplos:</p>
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h4>Color de fondo</h4>
+        <p>Utiliza la clase "bg-primary" para agregar un fondo azul a un elemento:</p>
+        <div class="bg-primary text-white p-3 mb-3">Fondo azul con texto blanco</div>
+        <p>Utiliza la clase "bg-secondary" para agregar un fondo gris a un elemento:</p>
+        <div class="bg-secondary text-white p-3 mb-3">Fondo gris con texto blanco</div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <h4>Tamaño del texto</h4>
+        <p>Utiliza las clases "display-*" para modificar el tamaño del texto:</p>
+        <p class="display-1">Texto de tamaño 1 (96px)</p>
+        <p class="display-2">Texto de tamaño 2 (60px)</p>
+        <p class="display-3">Texto de tamaño 3 (48px)</p>
+        <p class="display-4">Texto de tamaño 4 (34px)</p>
+        <p class="lead">Texto destacado con "lead"</p>
+      </div>
+    </div>
+    <hr>
+    <h3>Modificadores</h3>
+    <p>Los modificadores son clases que se utilizan para modificar el aspecto de los elementos, como el margen, el padding, el borde o el color. Aquí hay algunos ejemplos:</p>
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h4>Bordes redondeados</h4>
+        <p>Utiliza las clases "rounded-*" para agregar bordes redondeados:</p>
+        <div class="bg-light p-3 mb-3 rounded">Bordes redondeados suaves</div>
+        <div class="bg-light p-3 mb-3 rounded-top">Bordes redondeados en la parte superior</div>
+        <div class="bg-light p-3 mb-3 rounded-right">Bordes redondeados en el lado derecho</div>
+        <div class="bg-light p-3 mb-3 rounded-bottom">Bordes redondeados en la parte inferior</div>
+        <div class="bg-light p-3 mb-3 rounded-left">Bordes redondeados en el lado izquierdo</div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <h4>Colores de fondo y texto</h4>
+        <p>Utiliza las clases "bg-*" y "text-*" para modificar el color de fondo y el color del texto:</p>
+        <div class="bg-primary text-white p-3 mb-3">Fondo azul con texto blanco</div>
+        <div class="bg-secondary text-white p-3 mb-3">Fondo gris con texto blanco</div>
+        <div class="bg-success text-white p-3 mb-3">Fondo verde con texto blanco</div>
+        <div class="bg-danger text-white p-3 mb-3">Fondo rojo con texto blanco</div>
+        <div class="bg-warning text-dark p-3 mb-3">Fondo amarillo con texto oscuro</div>
+        <div class="bg-info text-white p-3 mb-3">Fondo azul claro con texto blanco</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Enlazar los archivos JavaScript de Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jiz…" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl…" crossorigin="anonymous"></script>
+</body>
+</html>

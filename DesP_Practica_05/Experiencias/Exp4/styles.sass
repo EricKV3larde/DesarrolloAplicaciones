@@ -1,0 +1,33 @@
+// Definir variables
+$primary-color: #007bff
+$secondary-color: #6c757d
+
+// Estilos para botones
+.btn
+  padding: 10px 20px
+  border: none
+  border-radius: 5px
+  cursor: pointer
+  font-weight: bold
+  text-transform: uppercase
+
+// Estilos para botón principal
+.primary-btn
+  @extend .btn // Reutilizar estilos de .btn
+  background-color: $primary-color
+  color: #fff
+
+// Estilos para botón secundario
+.secondary-btn
+  @extend .btn // Reutilizar estilos de .btn
+  background-color: $secondary-color
+  color: #fff
+
+// Estilos para el encabezado
+h1
+  font-size: 24px
+  margin-bottom: 20px
+
+// Estilos para el contenedor
+.container
+  text-align: center

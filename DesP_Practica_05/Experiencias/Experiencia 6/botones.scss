@@ -1,0 +1,13 @@
+// MIXIN para estilos de botones
+@mixin boton-estilos($fondo, $color) {
+    padding: 10px 20px;
+    font-size: $base-font-size;
+    color: $color;
+    background-color: $fondo;
+    border: none;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: darken($fondo, 10%);
+    }
+  }

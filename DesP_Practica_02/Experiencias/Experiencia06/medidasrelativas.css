@@ -1,0 +1,33 @@
+/* medidasrelativas.css */
+
+/* Ejemplo 1: Unidades rem (tamaño de fuente del elemento raíz) */
+.rem-ejemplo {
+    font-size: 1.5rem;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+/* Ejemplo 2: Unidades em (tamaño de fuente del elemento padre) */
+.em-ejemplo {
+    color: rgba(0, 128, 0, 0.7);
+    font-size: 1.2em;
+}
+
+/* Ejemplo 3: Unidades vw (1% del ancho de la ventana) */
+.vw-ejemplo {
+    background-color: rgba(0, 0, 255, 0.3);
+    width: 50vw;
+}
+
+/* Ejemplo 4: Unidades vh (1% de la altura de la ventana) */
+.vh-ejemplo {
+    background-color: rgba(255, 255, 0, 0.4);
+    height: 40vh;
+}
+
+/* Ejemplo 5: Unidades % (porcentaje relativo al elemento padre) */
+.porcentaje-ejemplo {
+    border: 20px solid rgba(0, 0, 0, 0.212);
+    width: 75%;
+    padding: 5%;
+    margin: 2.5%;
+}

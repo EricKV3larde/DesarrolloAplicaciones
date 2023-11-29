@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 19.2px;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #3498db;
+  border: none;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #217dbb;
+}
+.button.secondary {
+  background-color: #e74c3c;
+  font-size: 17.6px;
+}/*# sourceMappingURL=scss.css.map */
