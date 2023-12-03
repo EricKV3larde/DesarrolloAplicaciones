@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD con Firebase</title>
+</head>
+<body>
+    <h1>CRUD con Firebase</h1>
+    
+    <h2>Agregar Nuevo Item:</h2>
+    <form id="addItemForm">
+        <label for="itemName">Nombre del Item:</label><br>
+        <input type="text" id="itemName" name="itemName"><br><br>
+        <label for="itemDescription">Descripción:</label><br>
+        <textarea id="itemDescription" name="itemDescription" rows="4" cols="50"></textarea><br><br>
+        <button type="submit">Agregar</button>
+    </form>
+    
+    <h2>Items:</h2>
+    <ul id="itemsList"></ul>
+
+    <script>
+        const addItemForm = document.getElementById('addItemForm');
+        const itemsList = document.getElementById('itemsList');
+
+        addItemForm.addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const formData = new FormData(addItemForm);
+            const itemName = formData.get('itemName');
+            const itemDescription = formData.get('itemDescription');
+            
+            try {
+                const response = await fetch('/add', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ itemName, itemDescription })
+                });
+                
+                const data = await response.json();
+                alert(data.message);
+                addItemForm.reset();
+                loadItems();
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+
+        async function loadItems() {
+            itemsList.innerHTML = '';
+            try {
+                const response = await fetch('/get');
+                const data = await response.json();
+                data.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = `${item.itemName}: ${item.itemDescription}`;
+                    
+                    const updateBtn = document.createElement('button');
+                    updateBtn.textContent = 'Actualizar';
+                    updateBtn.addEventListener('click', async () => {
+                        const updatedName = prompt('Ingrese el nuevo nombre:', item.itemName);
+                        const updatedDescription = prompt('Ingrese la nueva descripción:', item.itemDescription);
+                        try {
+                            const updateResponse = await fetch(`/update/${item.id}`, {
+                                method: 'PUT',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ itemName: updatedName, itemDescription: updatedDescription })
+                            });
+                            const updateData = await updateResponse.json();
+                            alert(updateData.message);
+                            loadItems();
+                        } catch (error) {
+                            console.error('Error:', error);
+                        }
+                    });
+
+                    const deleteBtn = document.createElement('button');
+                    deleteBtn.textContent = 'Eliminar';
+                    deleteBtn.addEventListener('click', async () => {
+                        try {
+                            const deleteResponse = await fetch(`/delete/${item.id}`, { method: 'DELETE' });
+                            const deleteData = await deleteResponse.json();
+                            alert(deleteData.message);
+                            loadItems();
+                        } catch (error) {
+                            console.error('Error:', error);
+                        }
+                    });
+                    
+                    li.appendChild(updateBtn);
+                    li.appendChild(deleteBtn);
+                    itemsList.appendChild(li);
+                });
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        loadItems();
+    </script>
+</body>
+</html>
